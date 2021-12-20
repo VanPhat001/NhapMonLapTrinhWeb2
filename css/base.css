@@ -135,3 +135,29 @@ p {
     background-size: 100%;
     background-position: center;
 }
+
+.pagination {
+    margin-top: 10px;    
+    font-size: 1.65rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pagination {
+    border: 1px solid gray;    
+    font-weight: 700;
+    background-color: gainsboro;
+    color: var(--color--dark);
+
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pagination-prev,
+.btn-pagination-next {
+    font-size: 2.4rem;
+}

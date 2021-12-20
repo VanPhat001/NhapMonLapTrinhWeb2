@@ -119,8 +119,10 @@ var productList = {
 };
 
 var account = [
-    {taikhoan: 'user1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.jpg'},
-    {taikhoan: 'user2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.jpg'},
-    {taikhoan: 'user3@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.jpg'},
-    {taikhoan: 'user4@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.png'}
+    {taikhoan: 'user1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.jpg', isAdmin: false},
+    {taikhoan: 'user2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.jpg', isAdmin: false},
+    {taikhoan: 'user3@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.jpg', isAdmin: false},
+    {taikhoan: 'user4@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.png', isAdmin: false},
+    {taikhoan: 'admin1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.png', isAdmin: true},
+    {taikhoan: 'admin2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.png', isAdmin: true},
 ];

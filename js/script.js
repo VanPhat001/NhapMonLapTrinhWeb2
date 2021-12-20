@@ -31,7 +31,7 @@ for (const key in productList) {
         let div = document.createElement('div');
         div.className = 'product-box';
         div.innerHTML = `
-            <a href="sanpham.html" id="${product.id}" class="product" target='_blank'>
+            <a href="sanpham.html" id="${product.id}" class="product">
                 <div class="product--img" style="background-image: url(${product.imageList[0]})"></div>
                     <p class="product--name">${product.name}</p>
                 <div class="product--price">${product.price} <u>đ</u></div>
@@ -60,6 +60,11 @@ function findAccount(frm) {
             changeAvatar(i);
 
             frm.pass.value = '';
+            if (element.isAdmin)
+            {
+                window.open('../quantri.html', '_self');
+            }
+
             return false;
         }
     }

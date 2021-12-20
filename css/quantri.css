@@ -23,7 +23,7 @@ body {
 
 .quantri-main .main-section-title {
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 2rem;
     padding: 30px 0 5px 0;
     font-weight: 700;
@@ -79,7 +79,21 @@ aside.quantri-aside {
 }
 
 .quantri-header-row .right-col .btn + .btn {
-    margin-left: 5px;
+    margin-left: 10px;
+}
+
+.quantri-header-row .avatar-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.quantri-header__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-image: url(../image/avatar1.png);
 }
 
 .quantri-header-row .right-col .btn-back-home {
