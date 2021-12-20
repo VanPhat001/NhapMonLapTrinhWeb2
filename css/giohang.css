@@ -1,0 +1,69 @@
+.basket-wrap {
+    background-color: var(--color--light);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+#basket-table{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.226);
+    border-collapse: collapse;
+}
+
+th, tr, td, table {
+    vertical-align: top;
+}
+
+td, th {
+    padding: 10px;
+}
+
+th {
+    vertical-align: middle;
+}
+
+#basket-table .image {
+    min-width: 120px;
+    /* text-align: center; */
+}
+
+.basket-table__img {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+
+    background-image: url(../image/sanpham/sp1_0.jpg);
+}
+
+#basket-table .name{
+    min-width: 350px;
+    /* text-align: left; */
+}
+
+#basket-table .quantily {
+    min-width: 100px;
+    /* text-align: center; */
+}
+
+#basket-table .price {
+    min-width: 175px;
+    /* text-align: center; */
+}
+
+#basket-table .del {
+    min-width: 60px;
+    /* text-align: center; */
+}
+
+.basket-table__btn-close {
+    font-size: 2.8rem;
+    color: #e91313;
+}
+
+
+#basket-table .total-price {
+    /* text-align: right; */
+}

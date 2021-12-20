@@ -1,0 +1,137 @@
+:root {
+    --color--primary: #274c77;
+
+    --color--sub-1: #6096ba;
+    --color--sub-2: #a3cef1;
+    --color--sub-3: #8b8c89;
+    --color--sub-4: #e5e5e5;
+
+    --color--text: #e7ecef;
+    --color--light: #fff;
+    --color--dark: #000;
+}
+
+html {
+    font-size: 10px;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid currentColor;
+}
+
+p {
+    margin: 0;
+}
+
+.wrap {
+    /* height: 100%;
+    width: 100%; */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+}
+
+.menu__list {
+    list-style: none;
+}
+
+.btn,
+.menu__list--link {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu--horizontal {
+    display: flex;
+}
+
+.menu--horizontal .menu__list {
+    padding-right: 10px;
+}
+
+.menu--vertical {
+    display: block;
+}
+
+.background-fixed-fullscreen {
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+.btn--effect {
+    padding: 3px 10px;
+    text-align: center;
+    position: relative;
+    min-width: 70px;
+}
+
+.btn--effect::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    opacity: .3;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn--effect:hover::after {
+    opacity: .5;
+}
+
+.color--red {
+    color: red !important;
+}
+
+.color--orange {
+    color: orange !important;
+}
+
+.color--yellow {
+    color: yellow !important;
+}
+
+.color--green {
+    color: green !important;
+}
+
+.color--blue {
+    color: blue !important;
+}
+
+.color--purple {
+    color: purple !important;
+}
+
+.color--indigo {
+    color: indigo !important;
+}
+
+.color--sub-1 {
+    color: var(--color--sub-1) !important;
+}
+
+.img-box {
+    /* background-image: url(../image/sanpham/sp1_0.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
