@@ -6,7 +6,7 @@
 
 #basket-table{
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     font-size: 1.6rem;
     text-align: center;
     border-color: rgba(0, 0, 0, 0.226);

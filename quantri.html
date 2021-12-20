@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản trị</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- project -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/quantri.css">
+    <script defer src="js/store.js"></script>
+    <script defer src="js/quantri.js"></script>
+
+</head>
+
+<body>
+
+
+    <header class="quantri-header">
+
+        <div class="quantri-wrapper">
+            <div class="quantri-header-row">
+                <div class="left-col">
+                    <a href="index.html" class="logo">logo</a>
+                </div>
+
+                <div class="right-col">
+                    <a class="btn btn-back-home" href="index.html">xem website</a>
+                    <div class="btn">account</div>
+                    <img class="btn btn-switch-langue" height="20px" src="image/vietnam_flag.png" title="đổi sang tiếng Việt">
+                    <img class="btn btn-switch-langue" height="20px" src="image/eng_flag.png" title="đổi sang tiếng Anh">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="quantri-main">
+        <nav class="quantri-sidebar">
+            <ul class="menu menu--vertical">
+                <li class="menu__list">
+                    <div class="menu-title">Bảng điều khiển</div>
+                </li>
+            </ul>
+    
+            <ul class="menu menu--vertical">
+                <li class="menu__list">
+                    <div class="menu-title sidebar-list sidebar--select">Sản phẩm</div>
+                </li>
+    
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Danh mục</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item sidebar--select">Sản phẩm</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Thanh toán định kỳ</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Bộ lọc</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Thuộc tính</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Các tùy chọn</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Nhà sản xuất</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Tải xuống</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Ý kiến khách hàng</a></li>
+                <li class="menu__list"><a href="#" class="menu__list--link sidebar-item">Thông tin</a></li>
+            </ul>
+    
+            <ul class="menu menu--vertical">
+                <li class="menu__list"><div class="menu-title sidebar-list">Phần mở rộng</div></li>
+            </ul>
+    
+            <ul class="menu menu--vertical">
+                <li class="menu__list"><div class="menu-title sidebar-list">Thiết kế</div></li>
+            </ul>        
+        </nav>
+
+        <article class="quantri-article">
+            <div class="main-section-title"><i class="fas fa-warehouse"></i> Sản phẩm</div>
+            <div class="quantri-wrapper">
+                
+                <table id="quantri-table" border="1">
+                    <thead>
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="image">
+                                <div class="img-box quantri-table__img"></div>
+                            </td>
+                            <td class="name">
+                                <p class="quantri-table__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, velit dignissimos. Repellat itaque quae eum assumenda vitae. Dolorum temporibus fugit, perferendis nihil placeat labore ipsam tempora! Adipisci ea laborum tenetur?</p>
+                            </td>
+                            <td class="price">
+                                <p class="quantri-table__price">999.999 <u>đ</u></p>
+                            </td>
+                            <td class="quantily">
+                                <p class="quantri-table__quantily">5</p>
+                            </td>
+                            <td class="status">
+                                <p class="quantri-table__status">Bật</p>
+                            </td>
+                            <td class="modify">
+                                <i class="fas fa-edit btn quantri-table__modify"></i>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+
+            </div>
+        </article>
+        
+
+        <aside class="quantri-aside">
+            <div class="main-section-title"><i class="fas fa-filter"></i> Filter</div>
+            <div class="quantri-wrapper">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="filter__product-name">Tên sản phẩm</label>
+                            <input type="text" id="filter__product-name" placeholder="Tên sản phẩm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="filter__product-price">Giá</label>
+                            <input type="text" id="filter__product-price" placeholder="Giá">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="filter__product-quantily">Số lượng</label>
+                            <input type="text" id="filter__product-quantily" placeholder="Số lượng">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="filter__product-status">Trạng thái</label>
+                            <select id="filter__product-status">                                
+                                <option value=""></option>
+                                <option value="">Mở</option>
+                                <option value="">Đóng</option>
+                            </select>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <button class="btn filter__btn-filter">Lọc</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="main-section-title"><i class="fas fa-box"></i> Thêm sản phẩm</div>
+            <div class="quantri-wrapper">
+                <table id="add-product-table">
+                    <tr>
+                        <td>
+                            <label for="add-product-table__product-name">Tên sản phẩm</label>
+                            <input type="text" id="add-product-table__product-name"placeholder="Tên sản phẩm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="add-product-table__product-price">Giá</label>
+                            <input type="text" id="add-product-table__product-price" placeholder="Giá">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="add-product-table__product-quantily">Số lượng</label>
+                            <input type="text" id="add-product-table__product-quantily" placeholder="Số lượng">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Ảnh sản phẩm</label>
+                            <input type="file" id="add-product-table__product-image">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn add-product-table__btn-add" onclick="addProduct();">Thêm</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </aside>
+    </main>
+
+</body>
+
+</html>

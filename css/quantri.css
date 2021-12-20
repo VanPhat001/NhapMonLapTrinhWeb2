@@ -1,0 +1,253 @@
+:root {
+    --side-bar-width: 250px;
+    --remain-width: calc(100% - var(--side-bar-width));
+    --main-section-margin: 12px;
+}
+
+body {
+    font-size: 1.5rem;
+    background-color: gainsboro;
+}
+
+/***************************************************************/
+/*                      main & main layout                     */
+/***************************************************************/
+.quantri-main {
+    display: grid;
+    grid-template-columns:
+        var(--side-bar-width)
+        calc(var(--remain-width) * 3 / 4)
+        calc(var(--remain-width) * 1 / 4);
+    grid-template-areas: "nav article aside";
+}
+
+.quantri-main .main-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 30px 0 5px 0;
+    font-weight: 700;
+    color: var(--color--primary);
+}
+
+nav.quantri-sidebar {
+    grid-area: nav;
+}
+
+article.quantri-article {
+    grid-area: article;
+}
+
+aside.quantri-aside {
+    grid-area: aside;
+}
+
+/***************************************************************/
+/*                         header                              */
+/***************************************************************/
+
+.quantri-wrapper {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.quantri-header {
+    padding: 20px 0;
+    background-color: var(--color--primary);
+    color: var(--color--text);
+    font-weight: 600;
+}
+
+.quantri-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantri-header-row .logo {
+    width: 300px;
+    height: 40px;
+    border: 1px solid;
+    display: inline-block;
+    color: var(--color--text);
+    text-decoration: none;
+}
+
+.quantri-header-row .right-col {
+    display: flex;
+    align-items: center;
+}
+
+.quantri-header-row .right-col .btn + .btn {
+    margin-left: 5px;
+}
+
+.quantri-header-row .right-col .btn-back-home {
+    color: var(--color--text);
+}
+
+.quantri-header-row .right-col .btn-back-home:hover {
+    color: var(--color--sub-1);
+}
+
+.quantri-header-row .right-col .btn-switch-langue {
+    border: 2px solid transparent;
+}
+
+.quantri-header-row .right-col .btn-switch-langue:hover {
+    border-color: var(--color--sub-1);
+}
+
+/***************************************************************/
+/*                         side-bar                            */
+/***************************************************************/
+
+.quantri-sidebar {
+    overflow-y: auto;
+
+    width: var(--side-bar-width);
+    height: 100%;
+    max-height: 100vh;
+
+    background-color: #31373d;
+    color: var(--color--sub-1);
+    font-size: 1.6rem;
+    font-weight: 550;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.quantri-sidebar .menu__list--link,
+.quantri-sidebar .menu-title {
+    position: relative;
+    padding: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s linear;
+}
+
+.quantri-sidebar .menu-title:hover,
+.quantri-sidebar .menu-title.sidebar--select {
+    color: var(--color--sub-2);
+    background-color: #212429;
+}
+
+.quantri-sidebar .menu__list--link:hover,
+.quantri-sidebar .menu__list--link.sidebar--select {
+    color: var(--color--sub-2);
+    background-color: #292e36;
+}
+
+.quantri-sidebar .menu-title::after {
+    text-align: right;
+    font-size: 1.2rem;
+    content: "▼";
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.quantri-sidebar .sidebar-item::before {
+    content: "»";
+    padding-right: 5px;
+}
+
+.quantri-sidebar .menu__list--link {
+    font-size: 1.45rem;
+    padding-left: 15px;
+    color: var(--color--sub-3);
+    display: block;
+}
+
+/***************************************************************/
+/*                        artile                               */
+/***************************************************************/
+
+.quantri-article {
+    background-color: var(--color--light);
+    margin: var(--main-section-margin);
+    border-radius: 3px;
+    padding-bottom: 25px;
+}
+
+.quantri-article table {
+    margin-top: 4px;
+    border-collapse: collapse;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.quantri-article .image {
+    padding: 5px;
+}
+
+.quantri-article .quantri-table__img {
+    width: 65px;
+    height: 65px;
+    background-image: url(../image/sanpham/sp1_0.jpg);
+}
+
+.quantri-article .quantri-table__price {
+    min-width: 80px;
+}
+
+.quantri-article .quantri-table__modify {
+    background-color: var(--color--primary);
+    color: var(--color--light);
+    padding: 9px;
+    border-radius: 3px;
+}
+
+.quantri-article .quantri-table__modify:hover {
+    opacity: 0.8;
+}
+
+/***************************************************************/
+/*                         aside                               */
+/***************************************************************/
+
+.quantri-aside {
+    background-color: var(--color--light);
+    height: fit-content;
+    border-radius: 3px;
+    margin: var(--main-section-margin) 0 0 var(--main-section-margin);
+    padding: 0 0 20px 0;
+}
+
+.quantri-aside table {
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.226);
+}
+
+.quantri-aside tr:not(:first-child) td {
+    padding-top: 10px;
+}
+
+.quantri-aside table label {
+    font-weight: 550;
+    opacity: 0.8;
+}
+
+.quantri-aside table select,
+.quantri-aside table input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+
+    box-sizing: border-box;
+}
+
+.filter__btn-filter,
+.add-product-table__btn-add {
+    width: 100%;
+    background-color: gainsboro;
+    padding: 5px 0;
+    font-size: 1.55rem;
+    font-weight: 600;
+}
