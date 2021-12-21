@@ -21,7 +21,8 @@ body {
     grid-template-areas: "nav article aside";
 }
 
-.quantri-main .main-section-title {
+.modify-wrapper .section-title,
+.quantri-main .section-title {
     text-align: center;
     text-transform: capitalize;
     font-size: 2rem;
@@ -233,20 +234,25 @@ aside.quantri-aside {
     padding: 0 0 20px 0;
 }
 
+#modify-table,
 .quantri-aside table {
     width: 100%;
     border-color: rgba(0, 0, 0, 0.226);
 }
 
+#modify-table tr:not(:first-child) td,
 .quantri-aside tr:not(:first-child) td {
     padding-top: 10px;
 }
 
+#modify-table label,
 .quantri-aside table label {
     font-weight: 550;
     opacity: 0.8;
 }
 
+#modify-table select,
+#modify-table input,
 .quantri-aside table select,
 .quantri-aside table input {
     width: 100%;
@@ -257,11 +263,54 @@ aside.quantri-aside {
     box-sizing: border-box;
 }
 
+
 .filter__btn-filter,
-.add-product-table__btn-add {
+.add-product-table__btn-add,
+.modify-table__btn-modify,
+.modify-table__btn-remove {
     width: 100%;
     background-color: gainsboro;
     padding: 5px 0;
     font-size: 1.55rem;
     font-weight: 600;
+}
+
+
+
+.background-fixed-fullscreen {
+    display: none;
+}
+
+.modify-wrapper {
+    background-color: gainsboro;
+    margin: auto;
+    padding: 10px 10px 40px 10px;
+    border-radius: 3px;
+
+    position: relative;
+}
+
+#modify-table .btn-group {
+    display: flex;
+}
+
+#modify-table .product-image-row {
+    display: flex;
+}
+
+#modify-table #modify-table__image {
+    width: 60px;
+    height: 60px;
+}
+
+#modify-table .modify-table__btn-modify,
+#modify-table .modify-table__btn-remove {
+    color: var(--color--primary);
+}
+
+.modify-wrapper .btn-close-table {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2.4rem;
 }
