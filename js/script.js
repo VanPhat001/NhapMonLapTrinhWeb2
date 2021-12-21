@@ -5,16 +5,18 @@ loginForm.onreset = function () {
     return false;
 }
 
-// Load dữ liệu cho form đăng nhập và ảnh đại diện
-if (typeof localStorage['indexAccount'] !== "undefined")
+// Load avatar
+if (typeof localStorage['indexAccount'] !== "undefined") {
+    let path = account[localStorage['indexAccount']].avatar;
+    document.getElementsByClassName('header__avatar')[0].style.backgroundImage = `url(${path})`;
+}
+
+// Load dữ liệu cho form đăng nhập nếu có lưu
+if (typeof localStorage['userAccountSave'] !== "undefined" 
+    && typeof localStorage['userPasswordSave'] !== "undefined")
 {
-    let indexAccount = localStorage['indexAccount'];
-    if (0 <= indexAccount && indexAccount < account.length)
-    {
-        loginForm.username.value = account[indexAccount].taikhoan;
-        loginForm.pass.value = account[indexAccount].matkhau;
-        changeAvatar(indexAccount);
-    }
+    loginForm.username.value = localStorage['userAccountSave'];
+    loginForm.pass.value = localStorage['userPasswordSave'];
 }
 
 function changeAvatar(indexAccount) {  
@@ -55,8 +57,10 @@ function findAccount(frm) {
             alert('Đăng nhập thành công');
 
             if (save) {
-                localStorage.setItem('indexAccount', i);
+                localStorage.setItem('userAccountSave', taikhoan);
+                localStorage.setItem('userPasswordSave', matkhau);
             }
+            localStorage.setItem('indexAccount', i);
             changeAvatar(i);
 
             frm.pass.value = '';
@@ -90,10 +94,6 @@ function validate(frm) {
     return false; // không cho gửi dữ liệu :)
 }
 
-
-// function min(a, b) {
-//     return (a < b ? a : b);
-// }
 
 $(document).ready(function () {
     // lưu thông tin để mở trang sản phẩm

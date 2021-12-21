@@ -122,7 +122,7 @@ a.header-left-col__link:hover {
     margin-right: 10px;
     /* cursor: pointer; */
 
-    background-image: url(../image/avatar_anonymous.png);
+    background-image: url(../image/bot_avatar.jpg);
 }
 
 .header-right-col .header__btn-wrap .btn-login,
@@ -389,6 +389,17 @@ a.header-left-col__link:hover {
     top: 0;
 }
 
+@-webkit-keyframes fadeInToLeft {
+    from {
+        opacity: 0;
+        left: 100%;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
 @keyframes fadeInToLeft {
     from {
         opacity: 0;
@@ -397,6 +408,17 @@ a.header-left-col__link:hover {
     to {
         opacity: 1;
         left: 0;
+    }
+}
+
+@-webkit-keyframes fadeOutToLeft {
+    from {
+        opacity: 1;
+        left: 0;
+    }
+    to {
+        opacity: 0;
+        left: -100%;
     }
 }
 
@@ -411,6 +433,17 @@ a.header-left-col__link:hover {
     }
 }
 
+@-webkit-keyframes fadeInToRight {
+    from {
+        opacity: 0;
+        right: 100%;
+    }
+    to {
+        opacity: 1;
+        right: 0;
+    }
+}
+
 @keyframes fadeInToRight {
     from {
         opacity: 0;
@@ -419,6 +452,17 @@ a.header-left-col__link:hover {
     to {
         opacity: 1;
         right: 0;
+    }
+}
+
+@-webkit-keyframes fadeOutToRight {
+    from {
+        opacity: 1;
+        right: 0;
+    }
+    to {
+        opacity: 0;
+        right: -100%;
     }
 }
 

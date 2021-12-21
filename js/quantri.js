@@ -12,6 +12,10 @@ for (const key in productList) {
     }
 }
 
+if (typeof localStorage['indexAccount'] !== "undefined") {
+    let path = account[localStorage['indexAccount']].avatar;
+    document.getElementsByClassName('quantri-header__avatar')[0].style.backgroundImage = `url(${path})`;
+}
 
 $(document).ready(function () {
 
@@ -84,13 +88,13 @@ function checkData(nameInput, priceInput, quantilyInput, imageInput = null) {
         return false;
     }
 
-    if( isNaN(parseInt(priceInput.value)) ) {
+    if( isNaN(1 * (priceInput.value)) ) {
         alert('Giá sản phẩm không hợp lệ!');
         priceInput.focus();
         return false;
     }
 
-    if( isNaN(parseInt(quantilyInput.value)) ) {
+    if( isNaN(1 * (quantilyInput.value)) ) {
         alert('Số lượng sản phẩm không hợp lệ!');
         quantilyInput.focus();
         return false;
@@ -104,6 +108,7 @@ function checkData(nameInput, priceInput, quantilyInput, imageInput = null) {
 
     return true;
 }
+
 
 function showModifyTable(trId) { 
     quanTriBackgroundWrapper.style.display = 'flex';
@@ -134,7 +139,7 @@ function showModifyTable(trId) {
     }
 
     document.getElementsByClassName('modify-table__btn-modify')[0].onclick = function (e) {
-        checkData(modifyName, modifyPrice, modifyQuantily);
+        if (!checkData(modifyName, modifyPrice, modifyQuantily)) return;
 
         document.querySelector(`#${trId} .quantri-table__name`).textContent = modifyName.value;
         document.querySelector(`#${trId} .quantri-table__price`).textContent = modifyPrice.value;

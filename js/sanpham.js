@@ -4,7 +4,7 @@ console.log(product);
 
 document.querySelector('#product-full main').id = productId;
 
-// hiển thị ảnh
+// hiển thị ảnh sản phẩm
 let min = 4;
 if (product.imageList.length < 4) min = product.imageList.length;
 document.querySelector('.product-full__image-main').style.backgroundImage = `url(${product.imageList[0]})`;
@@ -18,7 +18,6 @@ for (let i = 0; i < min; i++)
     div.style.backgroundImage = `url(${imagePath})`;
     document.querySelector('.product-full__image-sub-wrap').appendChild(div);
 }
-
 
 
 $(document).ready(function () {

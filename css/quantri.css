@@ -129,6 +129,8 @@ aside.quantri-aside {
     font-size: 1.6rem;
     font-weight: 550;
 
+    position: -webkit-sticky;
+
     position: sticky;
     top: 0;
     left: 0;
@@ -139,7 +141,10 @@ aside.quantri-aside {
     position: relative;
     padding: 12px;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     transition: all 0.3s linear;
 }
 
@@ -214,7 +219,7 @@ aside.quantri-aside {
 .quantri-article .quantri-table__modify {
     background-color: var(--color--primary);
     color: var(--color--light);
-    padding: 9px;
+    padding: 5px;
     border-radius: 3px;
 }
 
@@ -228,6 +233,8 @@ aside.quantri-aside {
 
 .quantri-aside {
     background-color: var(--color--light);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-radius: 3px;
     margin: var(--main-section-margin) 0 0 var(--main-section-margin);
@@ -313,4 +320,68 @@ aside.quantri-aside {
     top: 10px;
     right: 10px;
     font-size: 2.4rem;
+}
+
+
+
+
+/* Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .quantri-main {
+        display: grid;
+        grid-template-columns: var(--side-bar-width) calc(var(--remain-width));
+        grid-template-areas: "nav aside"
+                             "nav article";
+    }
+
+    .quantri-aside {
+        margin-right: var(--main-section-margin);
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 739px) {
+    :root {
+        --side-bar-width: 250px;
+        /* --remain-width: calc(100% - var(--side-bar-width)); */
+        --remain-width: 100%;
+        --main-section-margin: 0;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .quantri-wrapper {
+        width: calc(100% - 10px);
+    }
+
+    .quantri-header-row {
+        flex-direction: column;
+    }
+
+    .quantri-header-row .right-col {
+        margin-top: 8px;
+    }
+
+    .quantri-main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "nav"
+                             "aside"
+                             "article";
+    }
+    
+    nav.quantri-sidebar {
+        display: none;
+    }
+
+    .quantri-article .quantri-table__img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quantri-article .quantri-table__price {
+        min-width: 55px;
+    }
 }

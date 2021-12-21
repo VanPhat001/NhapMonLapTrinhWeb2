@@ -55,9 +55,3 @@ function showBasketTable() {
     }
     totalPriceElement.innerHTML = totalPrice + ' <u>đ</u>';
 }
-
-
-$(document).ready(function () {
-
-
-});
