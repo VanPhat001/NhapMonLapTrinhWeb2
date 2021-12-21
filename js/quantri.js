@@ -88,7 +88,7 @@ function checkData(nameInput, priceInput, quantilyInput, imageInput = null) {
         return false;
     }
 
-    if( isNaN(1 * (priceInput.value)) ) {
+    if( isNaN(parseInt(priceInput.value)) ) {
         alert('Giá sản phẩm không hợp lệ!');
         priceInput.focus();
         return false;

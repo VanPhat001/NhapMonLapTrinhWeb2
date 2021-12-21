@@ -67,11 +67,17 @@ aside.quantri-aside {
 
 .quantri-header-row .logo {
     width: 300px;
-    height: 40px;
-    border: 1px solid;
+    height: 55px;
+    /* border: 1px solid; */
     display: inline-block;
     color: var(--color--text);
     text-decoration: none;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffd402;
+    background-image: url(../image/chotot-hcm.jpg);
 }
 
 .quantri-header-row .right-col {
@@ -342,8 +348,7 @@ aside.quantri-aside {
 /* Mobile */
 @media only screen and (max-width: 739px) {
     :root {
-        --side-bar-width: 250px;
-        /* --remain-width: calc(100% - var(--side-bar-width)); */
+        --side-bar-width: calc(100% - 10px);
         --remain-width: 100%;
         --main-section-margin: 0;
     }
@@ -372,7 +377,16 @@ aside.quantri-aside {
                              "article";
     }
     
-    nav.quantri-sidebar {
+    .quantri-sidebar {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 100%;
+        background-color: var(--color--light);
+        border-radius: 3px;
+    }
+
+    .quantri-sidebar .menu__list--link {
         display: none;
     }
 

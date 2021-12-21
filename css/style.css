@@ -138,10 +138,21 @@ a.header-left-col__link:hover {
     color: var(--color--sub-1);
 }
 
-.header-logo {
-    width: 200px;
-    border: 1px solid;
-    margin-right: 10px;
+.header-logo {    
+    margin-right: 5px;
+
+    width: 250px;
+    height: 55px;
+    /* border: 1px solid; */
+    display: inline-block;
+    color: var(--color--text);
+    text-decoration: none;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffd402;
+    background-image: url(../image/chotot-hcm.jpg);
 }
 
 .header-find {
@@ -166,7 +177,7 @@ a.header-left-col__link:hover {
 }
 
 .header-info {
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 1.6rem;
 }
 
