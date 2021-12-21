@@ -2,7 +2,7 @@
 var adsList = [
     { 'photo': 'image/quangcao/quangcao1.jpg' },
     { 'photo': 'image/quangcao/quangcao2.jpg' },
-    { 'photo': 'image/quangcao/quangcao3.jpg' },
+    { 'photo': 'image/quangcao/quangcao3.png' },
     { 'photo': 'image/quangcao/quangcao4.jpg' },
     { 'photo': 'image/quangcao/quangcao5.jpg' }
 ];

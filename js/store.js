@@ -40,16 +40,16 @@ var productList = {
     },
     sp004: {
         id: 'sp004',
-        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        name: '[chính hãng giá rẻ] Bộ MICRO livestream Icon Upod Pro Micro và mic thu âm Takstar PC-K200,kèm phụ kiện chân kẹp tai nghe',
         imageList: [
-            'image/sanpham/sp1_0.jpg',
-            'image/sanpham/sp1_1.jpg',
-            'image/sanpham/sp1_2.jpg',
-            'image/sanpham/sp1_3.jpg'
+            'image/sanpham/sp4_0.jpg',
+            'image/sanpham/sp4_1.jpg',
+            'image/sanpham/sp4_2.jpg',
+            'image/sanpham/sp4_3.jpg'
         ],
-        price: 999999,
+        price: 950000,
         rate: 4,
-        like: false
+        like: true
     },
     sp005: {
         id: 'sp005',
@@ -119,10 +119,10 @@ var productList = {
 };
 
 var account = [
-    {taikhoan: 'user1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.jpg', isAdmin: false},
-    {taikhoan: 'user2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.jpg', isAdmin: false},
-    {taikhoan: 'user3@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.jpg', isAdmin: false},
-    {taikhoan: 'user4@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.png', isAdmin: false},
-    {taikhoan: 'admin1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.png', isAdmin: true},
-    {taikhoan: 'admin2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.png', isAdmin: true},
+    { taikhoan: 'user1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.jpg', isAdmin: false },
+    { taikhoan: 'user2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.jpg', isAdmin: false },
+    { taikhoan: 'user3@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.jpg', isAdmin: false },
+    { taikhoan: 'user4@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.png', isAdmin: false },
+    { taikhoan: 'admin1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.png', isAdmin: true },
+    { taikhoan: 'admin2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.png', isAdmin: true },
 ];

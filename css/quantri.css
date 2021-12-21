@@ -386,6 +386,19 @@ aside.quantri-aside {
         border-radius: 3px;
     }
 
+    .quantri-sidebar .menu {
+        border-top: 1px solid rgba(0, 0, 0, 0.123);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+    }
+
+    .quantri-sidebar .menu:first-child {
+        border-top: 2px solid rgba(0, 0, 0, 0.123);
+    }
+
+    .quantri-sidebar .menu:last-child {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.123);
+    }
+
     .quantri-sidebar .menu__list--link {
         display: none;
     }
